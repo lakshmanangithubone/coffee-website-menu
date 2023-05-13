@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Kaushan+Script&family=Lato:wght@400;700&family=Merienda:wght@400;600;800;900&family=Montserrat:wght@500&family=Nunito+Sans:wght@400;600&family=Open+Sans&family=Poppins:wght@500&family=Raleway:wght@300;400;500;600;700;800;900&family=Source+Serif+Pro&family=Ubuntu:wght@500&display=swap");
+
+/* font-family: 'Josefin Sans', sans-serif;
+font-family: 'Kaushan Script', cursive;
+font-family: 'Lato', sans-serif;
+font-family: 'Merienda', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Nunito Sans', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Source Serif Pro', serif;
+font-family: 'Ubuntu', sans-serif; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-text-color: gray;
+  --secondary-text-color: black;
+  --third-text-color: white;
+  --primary-background-color: burlywood;
+}
+
+body {
+  width: 100%;
+  font-family: "Nunito Sans", sans-serif;
+  /* overflow-y: hidden; */
+}
+
+.menu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 10vw;
+}
+
+.menuHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.menuLogo {
+  width: 150px;
+  height: 50px;
+}
+
+.HeadingImage {
+  width: 100%;
+  height: 100%;
+}
+
+.menuHeader h2 {
+  margin-top: 20px;
+  font-size: 50px;
+  font-family: "Merienda", cursive;
+  text-align: center;
+}
+
+.menuBody {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  gap: 30px;
+  /* padding: 0px 5vw; */
+  margin-bottom: 50px;
+}
+
+.menuItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menuItemLogo {
+  width: 300px;
+  height: 300px;
+  margin-bottom: 10px;
+}
+
+.menuItemImage {
+  width: 100%;
+  height: 100%;
+}
+
+.menuItem p {
+  font-size: 20px;
+}
+
+/* media queries for screen size less than 1200px */
+
+@media (max-width: 1200px) {
+  .menuItemLogo {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* media queries for screen size less than 800px */
+
+@media (max-width: 800px) {
+  .menuBody {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+  }
+}
+
+/* media queries for screen size less than 500px */
+
+@media (max-width: 500px) {
+  .menuItemLogo {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* media queries for screen size less than 450px */
+
+@media (max-width: 450px) {
+  .menuBody {
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+  }
+  .menuItemLogo {
+    width: 250px;
+    height: 250px;
+  }
+
+  .menuHeader h2 {
+    font-size: 30px;
+  }
+}
